@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Base from "./containers/Base/Base";
+import Layout from "./components/Layout/Layout";
+import { connect } from "react-redux";
+import * as actions from "./store/actions/index";
+
+class App extends React.Component {
+  searchHandler = (e) => {
+    this.props.onSearch(e.target.value);
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <Layout search={this.searchHandler}>
+          <Base />
+        </Layout>
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onSearch: (input) => dispatch(actions.searchInput(input)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(App);

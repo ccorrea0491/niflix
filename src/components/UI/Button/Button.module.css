@@ -1,0 +1,16 @@
+.Button {
+  height: 40px;
+  width: 100px;
+  /* background-color: rgb(87, 86, 86); */
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  margin: 3px;
+  transition: all 0.3s;
+}
+
+.Button:hover {
+  background-color: rgb(219, 218, 218);
+  color: #000;
+}

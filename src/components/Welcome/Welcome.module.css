@@ -1,0 +1,25 @@
+.Welcome {
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+  width: 100%;
+
+  background-size: cover;
+  position: relative;
+}
+
+.PrimaryContent {
+  position: absolute;
+  top: 150px;
+  left: 60px;
+  color: #fff;
+  font-size: 24px;
+}
+
+.PrimaryContent h1 {
+  font-size: 230%;
+}
+
+.Overview {
+  width: 50%;
+  font-size: 60%;
+}

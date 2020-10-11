@@ -1,0 +1,14 @@
+.MoviesSection {
+  margin: 10px 30px;
+}
+.MoviesSection h2 {
+  color: #eee;
+}
+
+.Movies {
+  margin-top: 20px;
+
+  /* display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px; */
+}

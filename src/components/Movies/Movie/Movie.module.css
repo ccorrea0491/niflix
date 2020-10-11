@@ -1,0 +1,11 @@
+.Movie {
+  width: 250px;
+  height: 160px;
+  background-size: cover;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.Movie:hover {
+  transform: scale(1.2);
+}

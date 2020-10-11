@@ -1,0 +1,15 @@
+.Navigation ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Navigation li {
+  list-style: none;
+  margin-right: 5px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.Navigation li:hover {
+  color: rgb(173, 173, 173);
+}

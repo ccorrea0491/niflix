@@ -1,0 +1,20 @@
+.MovieModal {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+}
+
+.Content {
+  width: 35%;
+  color: white;
+  position: absolute;
+  top: 4%;
+  left: 4%;
+}
+
+.Content h1,
+.Content p {
+  margin-bottom: 10px;
+}

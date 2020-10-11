@@ -1,0 +1,49 @@
+.Header {
+  height: 60px;
+  width: 100%;
+  color: rgb(236, 236, 236);
+  padding: 0 10px;
+
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+}
+
+.HeaderLeft,
+.HeaderRight {
+  display: flex;
+  align-items: center;
+}
+
+.HeaderRight {
+  margin-right: 5px;
+}
+.HeaderRight * {
+  margin: 10px;
+}
+
+/* .SearchBox {
+  width: 250px;
+} */
+.SearchBox input {
+  float: right;
+  width: 80%;
+  transition: all 0.2s ease-in;
+  margin-left: 30px;
+}
+.SearchBox input:focus {
+  width: 100%;
+  transform: translateX(-10px);
+}
+
+.Notification svg,
+.User svg {
+  font-size: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.Notification svg:hover,
+.User svg:hover {
+  color: rgb(173, 173, 173);
+}
