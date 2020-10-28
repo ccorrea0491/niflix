@@ -26,7 +26,7 @@ export const search = (query) => {
     dispatch(searchStarted());
     axios
       .get(
-        `/search/movie?api_key=e3a076d9a44a6cc788be35e6a31583a9&language=en-US&query=${query}&page=1&include_adult=false`
+        `/search/movie?api_key=${process.env.API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`
       )
       .then((response) => {
         dispatch(searchSuccess(response.data.results));

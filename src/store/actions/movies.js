@@ -25,7 +25,9 @@ export const getMovies = () => {
     dispatch(getMoviesStarted());
     axios
       .get(
-        "/movie/popular?api_key=e3a076d9a44a6cc788be35e6a31583a9&language=en-US&page=1"
+        "/movie/popular?api_key=" +
+          process.env.API_KEY +
+          "&language=en-US&page=1"
       )
       .then((response) => {
         dispatch(getMoviesSuccess(response.data.results));
@@ -57,7 +59,9 @@ export const getTrending = () => {
     dispatch(getTrendingStarted());
     axios
       .get(
-        "/trending/all/day?api_key=e3a076d9a44a6cc788be35e6a31583a9&language=en-US&page=1"
+        "/trending/all/day?api_key=" +
+          process.env.API_KEY +
+          "&language=en-US&page=1"
       )
       .then((response) => {
         dispatch(getTrendingSuccess(response.data.results));
@@ -89,7 +93,9 @@ export const getTopRated = () => {
     dispatch(getTopRatedStarted());
     axios
       .get(
-        "/movie/top_rated?api_key=e3a076d9a44a6cc788be35e6a31583a9&language=en-US&page=1"
+        "/movie/top_rated?api_key=" +
+          process.env.API_KEY +
+          "&language=en-US&page=1"
       )
       .then((response) => {
         dispatch(getTopRatedSuccess(response.data.results));
@@ -121,9 +127,7 @@ export const getMovie = (id) => {
     dispatch(getMovieStarted());
     axios
       .get(
-        "/movie/" +
-          id +
-          "?api_key=e3a076d9a44a6cc788be35e6a31583a9&language=en-US"
+        "/movie/" + id + "?api_key=" + process.env.API_KEY + "&language=en-US"
       )
       .then((response) => {
         const info = Object.keys(response.data).map((movie) => {
@@ -133,4 +137,3 @@ export const getMovie = (id) => {
       });
   };
 };
-// PASS MOVIE DATA TO MODAL
