@@ -137,3 +137,4 @@ export const getMovie = (id) => {
       });
   };
 };
+// PASS MOVIE DATA TO MODAL
