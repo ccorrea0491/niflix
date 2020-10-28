@@ -5,6 +5,7 @@ import Base from "./containers/Base/Base";
 import Layout from "./components/Layout/Layout";
 import { connect } from "react-redux";
 import * as actions from "./store/actions/index";
+require("dotenv").config();
 
 class App extends React.Component {
   searchHandler = (e) => {

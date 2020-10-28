@@ -26,7 +26,7 @@ export const getMovies = () => {
     axios
       .get(
         "/movie/popular?api_key=" +
-          process.env.API_KEY +
+          process.env.REACT_APP_API_KEY +
           "&language=en-US&page=1"
       )
       .then((response) => {
@@ -60,7 +60,7 @@ export const getTrending = () => {
     axios
       .get(
         "/trending/all/day?api_key=" +
-          process.env.API_KEY +
+          process.env.REACT_APP_API_KEY +
           "&language=en-US&page=1"
       )
       .then((response) => {
@@ -94,7 +94,7 @@ export const getTopRated = () => {
     axios
       .get(
         "/movie/top_rated?api_key=" +
-          process.env.API_KEY +
+          process.env.REACT_APP_API_KEY +
           "&language=en-US&page=1"
       )
       .then((response) => {
@@ -127,7 +127,11 @@ export const getMovie = (id) => {
     dispatch(getMovieStarted());
     axios
       .get(
-        "/movie/" + id + "?api_key=" + process.env.API_KEY + "&language=en-US"
+        "/movie/" +
+          id +
+          "?api_key=" +
+          process.env.REACT_APP_API_KEY +
+          "&language=en-US"
       )
       .then((response) => {
         const info = Object.keys(response.data).map((movie) => {
